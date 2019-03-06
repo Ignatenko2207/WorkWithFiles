@@ -11,12 +11,19 @@ public class AppRunner {
 	
 	public static void main(String[] args) {
 		
-		EntityObj entityObj = new EntityObj("text field", 12345, true);
-		FileManagerService.writeObjectToFile(entityObj);
+		String catPath = "D:\\test\\cat.jpg";
+		String catCopyPath = "D:\\test\\cat_copy.jpg";
+			
+		FileManagerService.copyFile(catPath, catCopyPath);
 		
-		EntityObj entityObjFromFile = FileManagerService.readObjectFromFile();
-		logger.info(entityObj.toString());
+//		EntityObj entityObj = new EntityObj("text field", 12345, true);
+//		FileManagerService.writeObjectToFile(entityObj);
+//		
+//		EntityObj entityObjFromFile = FileManagerService.readObjectFromFile();
+//		logger.info(entityObj.toString());
+//		
+//		logger.info("The end!");
 		
-		logger.info("The end!");
+		
 	}
 }
